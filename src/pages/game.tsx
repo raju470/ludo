@@ -172,10 +172,10 @@ function nextTurn(current: number, finished: Set<PlayerColor>): number {
 
 // ── DiceFace static constants ────────────────────────────────────
 const IDLE_SHADOW = "0 4px 10px rgba(15,23,42,0.32), inset 0 1px 2px rgba(255,255,255,0.8)";
-const ROLLING_ANIMATE = { rotate: [0, 18, -15, 10, -6, 0], scale: [1, 1.06, 0.96, 1], y: [0, -3, 0] } as const;
+const ROLLING_ANIMATE = { rotate: [0, 18, -15, 10, -6, 0], scale: [1, 1.06, 0.96, 1], y: [0, -3, 0] };
 const ROLLING_TRANSITION = { duration: 0.55, repeat: Infinity } as const;
-const HIGHLIGHT_TRANSITION = { duration: 1.2, repeat: Infinity, repeatType: "loop" as const, ease: "easeInOut" };
-const IDLE_TRANSITION = { duration: 0.18 } as const;
+const HIGHLIGHT_TRANSITION = { duration: 1.2, repeat: Infinity, repeatType: "loop", ease: [0.42, 0, 0.58, 1] };
+const IDLE_TRANSITION = { duration: 0.18 };
 const GLOSS_STYLE = {
   position: "absolute" as const,
   inset: 2,
