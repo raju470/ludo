@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ludo Frontend
 
-## Getting Started
+Frontend-only Ludo game built with Next.js.
 
-First, run the development server:
+## Project Scope
+
+- This repository is configured as a frontend-only app.
+- The backend server folder has been removed.
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Framer Motion
+
+## Local Development
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev     # Start local dev server
+npm run build   # Create production build
+npm run start   # Run production build locally
+npm run lint    # Run ESLint
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- src/app: App Router pages, layout, and global styles.
+- src/pages: Additional route-based pages.
+- src/components: Reusable UI components.
+- public: Static assets.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Development Workflow
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Install dependencies.
+2. Run the app in development mode.
+3. Build before pushing changes.
+4. Run lint checks and fix issues.
 
-## Deploy on Vercel
+Recommended command sequence:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install
+npm run dev
+npm run lint
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Routes
+
+- / : Home page
+- /game : Ludo game page
+
+## Troubleshooting
+
+- If development server does not start, remove node_modules and reinstall dependencies.
+- If TypeScript errors appear after dependency changes, run a fresh build.
+- If styles look stale, restart the dev server.
+- If lint fails, run lint locally and fix warnings/errors before committing.
